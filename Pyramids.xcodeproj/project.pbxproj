@@ -13,6 +13,10 @@
 		1F930F3A278F4E1D0088EADD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F930F28278F4E1B0088EADD /* ContentView.swift */; };
 		1F930F3B278F4E1D0088EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F930F29278F4E1D0088EADD /* Assets.xcassets */; };
 		1F930F3C278F4E1D0088EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F930F29278F4E1D0088EADD /* Assets.xcassets */; };
+		1F930F47278F4E800088EADD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F930F46278F4E800088EADD /* Game.swift */; };
+		1F930F48278F4E800088EADD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F930F46278F4E800088EADD /* Game.swift */; };
+		1F930F4B278F4EA00088EADD /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F930F4A278F4EA00088EADD /* GameViewModel.swift */; };
+		1F930F4C278F4EA00088EADD /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F930F4A278F4EA00088EADD /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,8 @@
 		1F930F2E278F4E1D0088EADD /* Pyramids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pyramids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F930F34278F4E1D0088EADD /* Pyramids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pyramids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F930F36278F4E1D0088EADD /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		1F930F46278F4E800088EADD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		1F930F4A278F4EA00088EADD /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		1F930F26278F4E1B0088EADD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1F930F49278F4E910088EADD /* ViewModel */,
+				1F930F45278F4E3D0088EADD /* Model */,
 				1F930F27278F4E1B0088EADD /* PyramidsApp.swift */,
 				1F930F28278F4E1B0088EADD /* ContentView.swift */,
 				1F930F29278F4E1D0088EADD /* Assets.xcassets */,
@@ -76,6 +84,22 @@
 				1F930F36278F4E1D0088EADD /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		1F930F45278F4E3D0088EADD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F930F46278F4E800088EADD /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F930F49278F4E910088EADD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1F930F4A278F4EA00088EADD /* GameViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F930F4B278F4EA00088EADD /* GameViewModel.swift in Sources */,
 				1F930F39278F4E1D0088EADD /* ContentView.swift in Sources */,
+				1F930F47278F4E800088EADD /* Game.swift in Sources */,
 				1F930F37278F4E1D0088EADD /* PyramidsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +211,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F930F4C278F4EA00088EADD /* GameViewModel.swift in Sources */,
 				1F930F3A278F4E1D0088EADD /* ContentView.swift in Sources */,
+				1F930F48278F4E800088EADD /* Game.swift in Sources */,
 				1F930F38278F4E1D0088EADD /* PyramidsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +347,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -349,6 +378,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
